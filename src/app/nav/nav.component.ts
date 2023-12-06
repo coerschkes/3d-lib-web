@@ -26,9 +26,9 @@ import {NgForOf} from "@angular/common";
   styleUrl: './nav.component.css'
 })
 export class NavComponent {
-  navigationState: NavStateService;
+  navState: NavStateService;
 
   constructor(navigationState: NavStateService) {
-    this.navigationState = navigationState;
+    this.navState = navigationState;
   }
 }

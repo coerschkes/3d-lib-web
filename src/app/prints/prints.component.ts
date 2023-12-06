@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
-import {Print} from "./print";
 import {NgFor} from "@angular/common";
+import {PrintsStateService} from "./prints-state.service";
 
 @Component({
   selector: 'app-prints',
@@ -10,9 +10,9 @@ import {NgFor} from "@angular/common";
   styleUrl: './prints.component.css'
 })
 export class PrintsComponent {
-  prints: Print[] = [
-    new Print('test1', 'test1 description', 'img1 here'),
-    new Print('test2', 'test2 description', 'img2 here'),
-    new Print('test3', 'test3 description', 'img3 here'),
-  ];
+  printsState: PrintsStateService;
+
+  constructor(printsState: PrintsStateService) {
+    this.printsState = printsState;
+  }
 }

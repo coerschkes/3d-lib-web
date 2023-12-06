@@ -2,11 +2,11 @@
   <button mat-icon-button (click)="snav.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
-  <h1 class="app-name">{{navigationState.appName()}}</h1>
+  <h1 class="app-name">{{navState.appName()}}</h1>
 
   <div style="margin-right: 0; margin-left: auto">
 
-    <a *ngFor="let toolbarContent of navigationState.toolbarContents()" [routerLink]="[toolbarContent.routerLink]"
+    <a *ngFor="let toolbarContent of navState.toolbarContents()" [routerLink]="[toolbarContent.routerLink]"
        mat-icon-button
        [matTooltip]=toolbarContent.tooltip>
       <mat-icon>{{toolbarContent.icon}}</mat-icon>
@@ -16,7 +16,7 @@
 <mat-sidenav-container class="sidenav-container full-height">
   <mat-sidenav #snav fixedTopGap="64" [fixedInViewport]="true" mode="side">
     <mat-nav-list>
-      <a *ngFor="let navItem of navigationState.navigationItems()" mat-list-item
+      <a *ngFor="let navItem of navState.navigationItems()" mat-list-item
          [routerLink]="[navItem.routerLink]">{{navItem.linkName}}</a>
     </mat-nav-list>
   </mat-sidenav>
