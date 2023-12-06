@@ -14,15 +14,14 @@ import {NavigationItem} from "./nav/navigation-item";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = '3d-lib-web';
   navState: NavStateService;
 
   constructor(navState: NavStateService) {
     this.navState = navState;
-    this.initalize();
+    this.initialize();
   }
 
-  initalize() {
+  private initialize() {
     this.navState.appName.update(() => '3d Library')
     this.navState.navigationItems.set([new NavigationItem('', 'Home'), new NavigationItem('prints', 'Prints')])
   }
