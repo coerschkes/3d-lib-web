@@ -6,7 +6,7 @@
 
   <div style="margin-right: 0; margin-left: auto">
 
-    <a *ngFor="let toolbarContent of navState.toolbarContents()" [routerLink]="[toolbarContent.routerLink]"
+    <a *ngFor="let toolbarContent of navState.toolbarContent()" [routerLink]="[toolbarContent.routerLink]"
        mat-icon-button
        [matTooltip]=toolbarContent.tooltip>
       <mat-icon>{{toolbarContent.icon}}</mat-icon>

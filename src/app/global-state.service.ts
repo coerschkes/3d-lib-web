@@ -16,12 +16,12 @@ export class GlobalStateService {
   }
 
   private initialize() {
-    this.navState.appName.update(() => '3d Library')
-    this.navState.navigationItems.set([
+    this.navState.updateAppName('3d Library')
+    this.navState.updateNavigationItems([
       new NavigationItem('', 'Home'),
       new NavigationItem('prints', 'Prints')
     ])
-    this.printsState.prints.set([
+    this.printsState.updatePrints([
       new Print('test1', 'test1 description', 'img1 here'),
       new Print('test2', 'test2 description', 'img2 here'),
       new Print('test3', 'test3 description', 'img3 here')
