@@ -1,5 +1,6 @@
 # 3dLibWeb
 
+Simple webapp to store 3d print models with images and sliced models.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.5.
 
 ## Development server
